@@ -15,8 +15,8 @@ hyperparameters:
 
 paths:
   dir: "/media/SSD_2TB/imageclef2024/336images/"
-  train_dataset_path: "/media/SSD_2TB/imageclef2024/original_dataset/processed_captions/train_mysplit_processed.csv"
-  valid_dataset_path: "/media/SSD_2TB/imageclef2024/original_dataset/processed_captions/valid_mysplit_processed.csv"
-  dev_dataset_path: "/media/SSD_2TB/imageclef2024/original_dataset/processed_captions/dev_mysplit_processed.csv"
+  train_dataset_path: "/path/to/train_dataset.csv"
+  valid_dataset_path: "/path/to/valid_dataset.csv"
+  dev_dataset_path: "/path/to/dev_dataset.csv"
   result_path: "./result"
   output_dir: "./saved_model_earlystop_pxvls_half_df"
