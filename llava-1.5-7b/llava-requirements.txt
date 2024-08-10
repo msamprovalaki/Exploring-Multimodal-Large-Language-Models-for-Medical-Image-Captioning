@@ -1,0 +1,20 @@
+absl-py==2.1.0
+accelerate==0.27.2
+beautifulsoup4==4.12.3
+bitsandbytes==0.43.1
+datasets==2.18.0
+GitPython==3.1.43
+Levenshtein==0.25.1
+nltk @ file:///work/perseverance-python-buildout/croot/nltk_1698870894961/work
+numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp312-cp312-linux_x86_64.whl#sha256=1d700f51d8b4fa684d858c9e3b56b1656bc5c82b6b79ff08d4e3b491c430059f
+pandas @ file:///croot/pandas_1702317985682/work/dist/pandas-2.1.4-cp312-cp312-linux_x86_64.whl#sha256=e08f6f54958b7b5f7624ec6b206777bd22f94786e77f06f8d346e758d3da3fac
+peft==0.10.0
+pillow @ file:///croot/pillow_1707233021655/work
+python-Levenshtein==0.25.1
+scikit-learn @ file:///work/perseverance-python-buildout/croot/scikit-learn_1698865753889/work
+tokenizers==0.19.1
+torch==2.2.2
+torchaudio==2.2.2
+torchvision==0.17.2
+tqdm @ file:///work/perseverance-python-buildout/croot/tqdm_1701735729845/work
+transformers @ file:///home/msamprovalaki/scripts/OFA/transformers
