@@ -1,0 +1,7 @@
+MODEL_ID: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+ACCESS TOKEN: "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"
+IMAGE_DIR: "/media/SSD_2TB/imageclef2024/full_dataset/original_images/"
+INITIAL_CAPTIONS: "/home/msamprovalaki/llava/results/saved_model_earlystop_pxvls2_full_dataset_50_tokens_smaller_prompt_beam_4.csv"
+NEIGHBORS: "/home/msamprovalaki/neighbors_datasets/dev_neighbors_090_1_neighbor.csv"
+OUTPUT_PATH: "/home/msamprovalaki/ensembles/results/llama-3-1-quant-90-1-up-to-50-words-llava-initials-beam-4-new-prompt-again-50-tokens.csv"
+batch_size: 1
