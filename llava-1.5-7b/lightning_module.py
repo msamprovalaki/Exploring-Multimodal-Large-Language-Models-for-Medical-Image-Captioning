@@ -31,7 +31,7 @@ class LlavaModelPLModule(L.LightningModule):
         input_ids, pixel_values, answers = batch
         generated_ids = self.model.generate(input_ids=input_ids, 
                                             pixel_values=pixel_values,
-                                            max_new_tokens=300)
+                                            max_new_tokens=self.config['hyperparameters']['max_new_tokens'])
         predictions = self.processor.batch_decode(generated_ids[:, input_ids.size(1):], skip_special_tokens=True)
         scores = []
         for pred, answer in zip(predictions, answers):

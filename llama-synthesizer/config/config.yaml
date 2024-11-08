@@ -1,0 +1,12 @@
+MODEL_ID: "meta-llama/Meta-Llama-3.1-8B-Instruct"
+ACCESS TOKEN: "your_access_token"
+IMAGE_DIR: "/path/to/your/image/directory"
+initial_captions: "path/to/your/initial/captions"
+neighbors: "path/to/your/best/score/neighbors"
+output_path: "path/to/your/output/directory"
+cuda_device: 0
+
+test:
+  batch_size: 1
+  num_beams: 4
+  max_new_tokens: 100

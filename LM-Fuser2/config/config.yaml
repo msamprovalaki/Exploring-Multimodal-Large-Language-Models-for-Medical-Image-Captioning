@@ -1,0 +1,18 @@
+CUDA_VISIBLE_DEVICES: "5"
+
+model:
+  name: "google/flan-t5-large"
+  embedding_model_name: "all-MiniLM-L6-v2"
+
+data:
+  dev_inputs_file: "/path/to/dev_dataset.csv"
+  output_file: "/path/to/output.csv"
+
+hyperparameters:
+  test:
+    batch_size: 1
+    model_dir: "/path/to/model"
+    boost_factor: 1.0
+    num_beams: 4
+    max_length: 300
+    column_names : ['ID','ModelA', ModelB', 'ModelC'] # based on the number of models

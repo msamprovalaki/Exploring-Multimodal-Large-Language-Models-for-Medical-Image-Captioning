@@ -1,0 +1,33 @@
+# config.yaml
+hyperparameters:
+  max_length: 300
+  max_new_tokens: 300
+  model_id: "llava-hf/llava-1.5-7b-hf"
+  model: /path/to/model
+  use_lora: False
+  use_qlora: True
+  cuda_visible_devices: 7
+  lr: 1e-4
+  batch_size: 4
+  max_epochs: 30
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0
+  batch_size: 4
+  accumulate_grad_batches: 8
+  warmup_steps: 50
+  early_stopping_patience: 3
+
+  test:
+    batch_size: 1
+    num_beams: 4
+    max_new_tokens: 300
+    output_dir: "/path/to/output"
+
+
+paths:
+  dir: "/path/to/images/"
+  train_dataset_path: "/path/to/train.csv"
+  valid_dataset_path: "/path/to/valid.csv"
+  dev_dataset_path: "/path/to/dev.csv"
+  result_path: "/path/to/results/"
+  output_dir: "/path/to/output"

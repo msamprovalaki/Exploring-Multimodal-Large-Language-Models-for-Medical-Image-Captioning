@@ -1,0 +1,33 @@
+CUDA_VISIBLE_DEVICES: "5"
+
+model:
+  name: "google/flan-t5-large"
+
+data:
+  dir: '/path/to/images/' 
+  train_inputs_file: "/path/to/train_dataset.csv"
+  valid_inputs_file: "/path/to/valid_dataset.csv"
+  train_targets_file: "/path/to/train_targets.csv"
+  valid_targets_file: "/path/to/valid_targets.csv"
+  dev_inputs_file: "/path/to/dev_dataset.csv"
+
+hyperparameters:
+  train:
+    max_length: 300
+    learning_rate: 1e-4
+    batch_size: 2
+    num_epochs: 4
+    output_dir: "/path/to/output_dir"
+    input_columns : ['ID','ModelA', ModelB', 'ModelC'] # based on the number of models
+    seed: 42
+    early_stopping_patience: 5
+    early_stopping_threshold: 0.01
+  eval:
+    per_device_eval_batch: 2
+
+  test:
+    batch_size: 1
+    model_dir: "/path/to/model"
+    num_beams: 4
+    max_length: 300
+    column_names : ['ID','ModelA', ModelB', 'ModelC'] # based on the number of models

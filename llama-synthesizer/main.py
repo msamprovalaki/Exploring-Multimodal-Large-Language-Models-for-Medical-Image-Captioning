@@ -7,9 +7,10 @@ import torch
 from transformers import AutoTokenizer, BitsAndBytesConfig, AutoModelForCausalLM, pipeline
 
 
-def load_config(config_path):
+def load_config(config_path='/config/config.yaml'):
     with open(config_path, 'r') as file:
-        return yaml.safe_load(file)
+        config = yaml.safe_load(file)
+    return config
 
 
 def load_data(initial_captions_path, neighbors_path):
@@ -61,9 +62,9 @@ def parse_generated_text(generated_text, prompt):
     return clean_text
 
 
-def generate_captions(initial_captions, neighbors, pipeline, tokenizer, image_dir, batch_size):
+def generate_captions(initial_captions, neighbors, pipeline, tokenizer, image_dir, batch_size, config):
     results = []
-    print ('Batch size:', batch_size)
+    print ('Batch size:', config['test']['batch_size'])
     eos_token_id = tokenizer.eos_token_id
     if eos_token_id is None:
         raise ValueError("The tokenizer does not have an eos_token_id. Please check the tokenizer configuration.")
@@ -84,12 +85,12 @@ def generate_captions(initial_captions, neighbors, pipeline, tokenizer, image_di
             if not pd.isna(neighbor):
                 messages.append({
                     "role": "user",
-                    "content": f"In one concise sentence (up to 50 words), describe the content of the medical image, "
+                    "content": f"In one concise sentence (up to 50 words), describe the content of the medical image {image_path}, "
                                f"specifying the imaging modality (e.g., X-ray, CT, ultrasonography, MRI etc), the organ or body part involved, "
                                f"and any significant findings or abnormalities. Additionally, incorporate relevant details from the neighboring "
                                f"caption: {neighbor} to refine and enhance the draft caption: "
                                f"{initial_captions[initial_captions['ID'] == image]['Initial_Caption'].values[0]} "
-                               f"Do not include any additional information that is not present in the image."
+                               f"Do not include any additional information that is not present in the image or the neighboring caption."
                 })
             else:
                 # If there is no neighbor, use a generic prompt
@@ -110,10 +111,10 @@ def generate_captions(initial_captions, neighbors, pipeline, tokenizer, image_di
             # Generate the caption
             outputs = pipeline(
                 prompt,
-                max_new_tokens=100, # Bigger value to allow for longer captions, be careful with the hallucinations
+                max_new_tokens= config['test']['max_new_tokens'],
                 eos_token_id=[eos_token_id],
                 do_sample=False, # if False, beam search is used. if True, sampling is used
-                num_beams=4, # as the number of beams increases, the computation time increases
+                num_beams=config['test']['num_beams'],
             )
 
             generated_text = outputs[0]["generated_text"]
@@ -134,13 +135,13 @@ def save_results(results, output_path):
     print (f'Results saved in {output_path}')
 
 
-def main(config_path):
-    
-    os.environ["CUDA_VISIBLE_DEVICES"] = '5'
+def main():
 
-    config = load_config(config_path)
+    config = load_config()
 
-    initial_captions, neighbors = load_data(config['INITIAL_CAPTIONS'], config['NEIGHBORS'])
+    os.environ["CUDA_VISIBLE_DEVICES"] = config['cuda_device']
+
+    initial_captions, neighbors = load_data(config['initial_captions'], config['neighbors'])
 
     text_gen_pipeline, tokenizer = load_model(config['MODEL_ID'], config['ACCESS_TOKEN'])
 
@@ -150,12 +151,13 @@ def main(config_path):
         text_gen_pipeline,
         tokenizer,
         config['IMAGE_DIR'],
-        config['BATCH_SIZE']
+        config['test']['batch_size'],
+        config
     )
 
-    save_results(results, config['OUTPUT_PATH'])
-    print(f"Inference complete. Results saved to '{config['OUTPUT_PATH']}'.")
+    save_results(results, config['output_path'])
+    print(f"Inference complete. Results saved to '{config['output_path']}'.")
 
 
 if __name__ == "__main__":
-    main("config.yaml")
+    main()
