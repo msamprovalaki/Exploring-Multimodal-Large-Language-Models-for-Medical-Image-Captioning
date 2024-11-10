@@ -41,13 +41,12 @@ Experiments were conducted on ImageCLEF 2024 dataset, including [specify dataset
 
 If you use this repository or parts of this work in your own research, please cite the following:
 
-
-<!-- ```
-@masterthesis{yourname2024,
-  title={Exploring Multimodal Large Language Models for Medical Image Captioning},
-  author={Your Name},
-  year={2024},
-  institution={Your University},
-  url={https://github.com/yourusername/repository-name}
+```
+@mastersthesis{msamprovalaki-thesis,
+ author = {Marina Samprovalaki},
+ school = {Athens University of Economics and Business},
+ title = {Exploring Multimodal Large Language Models for Medical Image Captioning},
+ url = {tba},
+ year = {2024}
 }
-``` -->
+```
