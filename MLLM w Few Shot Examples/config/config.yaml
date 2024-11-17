@@ -1,0 +1,14 @@
+cuda_device: "6"
+batch_size: 1
+MODEL: 'LlavaForConditionalGeneration'
+
+model: "llava-hf/llava-1.5-7b-hf"
+
+paths:
+  image_dir: "/path/to/image/directory"
+  train_dataset: "/path/to/train/dataset"
+  dev_dataset: "/path/to/dev/dataset"
+  json_data: "/path/to/neighbors_data"
+  output_dir: "/path/to/output/directory"
+
+
