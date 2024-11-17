@@ -6,8 +6,6 @@ This repository contains the research and code for the thesis titled **"Explorin
 
 - [Introduction](#introduction)
 - [Dataset](#dataset)
-<!-- - [Experiments](#experiments) -->
-<!-- - [Conclusion](#conclusion) -->
 - [License](#license)
 - [Citation](#citation)
 
@@ -39,6 +37,10 @@ The dataset includes two tasks: **Concept Detection** and **Caption Prediction**
 | Llama 3.1 Synthesizer|   63.55   |   23.29 |  31.44 |  21.7 |
 | LM-Fuser2            |   65.10   |   24.24 |  32.25 |  20.2 |
 | LM-Fuser             |   65.27   |   24.40 |  31.99 |  21.4 |
+
+
+# License
+This repository is licensed under the MIT license. See [LICENSE](LICENSE) for more details.
 
 ## Citation
 
