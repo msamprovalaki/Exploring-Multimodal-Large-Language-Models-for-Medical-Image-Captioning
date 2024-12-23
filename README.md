@@ -19,7 +19,7 @@ This repository provides the following resources:
 - **Few-shot adaptation scripts** for LlaVA 1.5,utilizing image-caption pairs retrieved from the k-nearest neighbors of each test image in the training set.
 - Code for the **MLLM Synthesizer**, which integrates information from similar images and their corresponding neighbors to generate captions for test images.
 - Code for **LM-Fuser**, which aggregates captions from various MLLMs using their pretrained weights and trains a smaller language model solely on these outputs.
-- Code for **LM-Fuser2**, an alternative approach where, instead of directly using the outputs of multiple MLLMs, the framework selects the most similar candidate caption at each beam search step.
+
 
 ## Dataset
 
@@ -35,8 +35,7 @@ The dataset includes two tasks: **Concept Detection** and **Caption Prediction**
 | LLaVA 1.5 SFT        |   62.08   |   22.53 |  30.99 |  20.8 |
 | LLaVA 1.5 Few-Shot   |   59.02   |   20.60 |  28.25 |  17.6 |
 | Llama 3.1 Synthesizer|   63.55   |   23.29 |  31.44 |  21.7 |
-| LM-Fuser2            |   65.10   |   24.24 |  32.25 |  20.2 |
-| LM-Fuser             |   65.27   |   24.40 |  31.99 |  21.4 |
+| LM-Fuser             |   64.27   |   24.40 |  31.99 |  21.4 |
 
 
 # License
@@ -51,7 +50,6 @@ If you use this repository or parts of this work in your own research, please ci
  author = {Marina Samprovalaki},
  school = {Athens University of Economics and Business},
  title = {Exploring Multimodal Large Language Models for Medical Image Captioning},
- url = {tba},
  year = {2024}
 }
 ```
