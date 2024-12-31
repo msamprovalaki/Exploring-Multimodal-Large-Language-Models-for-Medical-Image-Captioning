@@ -46,10 +46,10 @@ This repository is licensed under the MIT license. See [LICENSE](LICENSE) for mo
 If you use this repository or parts of this work in your own research, please cite the following:
 
 ```
-@mastersthesis{msamprovalaki-thesis,
- author = {Marina Samprovalaki},
- school = {Athens University of Economics and Business},
- title = {Exploring Multimodal Large Language Models for Medical Image Captioning},
- year = {2024}
+@mastersthesis{samprovalaki2024multimodal,
+  author       = {M. Samprovalaki},
+  title        = {Exploring Multimodal Large Language Models for Medical Image Captioning},
+  school       = {Athens University of Economics and Business, Department of Informatics},
+  year         = {2024},
 }
 ```
