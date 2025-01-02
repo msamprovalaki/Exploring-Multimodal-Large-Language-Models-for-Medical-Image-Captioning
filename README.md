@@ -12,6 +12,7 @@ This repository contains the research and code for the thesis titled **"Explorin
 
 - [Introduction](#introduction)
 - [Dataset](#dataset)
+- [Performance](#performance)
 - [License](#license)
 - [Citation](#citation)
 
@@ -34,7 +35,7 @@ The dataset used in this research was provided by the [ImageCLEF 2024 competitio
 It consists of 80,080 image-caption pairs, along with associated image concepts.
 The dataset includes two tasks: **Concept Detection** and **Caption Prediction**. This research focuses on the latter task.
 
-## Models Performance Comparison
+## Performance
 
 | Model                | BertScore | ROUGE-L | BLEURT | BLEU  |
 |----------------------|-----------|---------|--------|-------|
