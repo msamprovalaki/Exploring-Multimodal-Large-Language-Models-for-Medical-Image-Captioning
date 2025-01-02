@@ -1,6 +1,18 @@
 # Exploring Multimodal Large Language Models for Medical Image Captioning
 
-This repository contains the research and code for the thesis titled [**"Exploring Multimodal Large Language Models for Medical Image Captioning"**](http://nlp.cs.aueb.gr/theses/m_samprovalaki_msc_thesis.pdf). The goal of this work is to investigate the potential of Multimodal Large Language Models (MLLMs) in the Diagnostic Captioning task. This research focuses on developing techniques that combine both visual and textual information to enhance the performance of automatic captioning systems for medical image analysis.
+This repository contains the research and code for the thesis titled **"Exploring Multimodal Large Language Models for Medical Image Captioning"**. The goal of this work is to investigate the potential of Multimodal Large Language Models (MLLMs) in the Diagnostic Captioning task. This research focuses on developing techniques that combine both visual and textual information to enhance the performance of automatic captioning systems for medical image analysis.
+
+<div style="display: flex; gap: 10px;">
+  <div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; text-align: center;">
+    <a href="http://nlp.cs.aueb.gr/theses.html#:~:text=MSc%20theses-,M.%20Samprovalaki,-%2C%20%22Exploring%20multimodal%20large" target="_blank" style="text-decoration: none; color: #FFFF;">Thesis</a>
+  </div>
+  <div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; text-align: center;color: #FFFF;">
+        <a href="http://nlp.cs.aueb.gr/theses.html#:~:text=MSc%20theses-,M.%20Samprovalaki,-%2C%20%22Exploring%20multimodal%20large" target="_blank" style="text-decoration: none; color: #FFFF;">Slides</a>
+  </div>
+</div>
+
+
+
 
 ## Table of Contents
 
