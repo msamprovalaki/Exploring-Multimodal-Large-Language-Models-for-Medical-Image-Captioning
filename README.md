@@ -2,7 +2,7 @@
 
 This repository contains the research and code for the thesis titled **"Exploring Multimodal Large Language Models for Medical Image Captioning"**. The goal of this work is to investigate the potential of Multimodal Large Language Models (MLLMs) in the Diagnostic Captioning task. This research focuses on developing techniques that combine both visual and textual information to enhance the performance of automatic captioning systems for medical image analysis.
 
-[Thesis](http://nlp.cs.aueb.gr/theses.html#:~:text=MSc%20theses-,M.%20Samprovalaki,-%2C%20%22Exploring%20multimodal%20large) |  [Slides](https://auebgr-my.sharepoint.com/:p:/g/personal/mar_samprovalaki_aueb_gr/EZoZI-rhd51IhCftJvCBXwoBVfpQ_hJcmuJ6B2B33UyUcQ?e=QsfGSr)
+[Thesis](http://nlp.cs.aueb.gr/theses/m_samprovalaki_msc_thesis.pdf) |  [Slides](https://auebgr-my.sharepoint.com/:p:/g/personal/mar_samprovalaki_aueb_gr/EZoZI-rhd51IhCftJvCBXwoBVfpQ_hJcmuJ6B2B33UyUcQ?e=QsfGSr)
 
 
 
