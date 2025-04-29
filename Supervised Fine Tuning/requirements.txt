@@ -15,4 +15,4 @@ tokenizers==0.19.1
 torch==2.2.2
 torchaudio==2.2.2
 torchvision==0.17.2
-transformers==4.44.2
+transformers==4.50.0
